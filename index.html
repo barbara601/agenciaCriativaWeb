@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência Criativa Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/png">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo da Agência Criativa Web">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle">☾</button>
+    </header>
+    <main>
+        <section id="home">
+            <div class="container">
+                <h2>BEM-VINDO À AGÊNCIA CRIATIVA WEB</h2>
+                <p>Somos uma agência de marketing digital especializada em criar soluções inovadoras para nossos clientes. Nossa equipe é composta por profissionais apaixonados por design, desenvolvimento e estratégias de marketing.</p>
+            </div>
+        </section>
+        <section id="sobre">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Na Agência Criativa Web, acreditamos que cada projeto é único e merece uma abordagem personalizada. Trabalhamos em estreita colaboração com nossos clientes para entender suas necessidades e criar soluções que realmente façam a diferença.</p>
+            </div>
+        </section>
+        <section id="servicos">
+            <div class="container">
+                <h2>Nossos Serviços</h2> 
+                <div class="servicos-lista">
+                    <div class="servicos-card">
+                        <h3>Design Gráfico</h3>
+                        <p>Criação de identidades visuais, logotipos, materiais de marketing e muito mais para destacar sua marca.</p>
+                    </div>
+                    <div class="servicos-card">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Desenvolvimento de sites responsivos, lojas virtuais e aplicações web personalizadas para atender às suas necessidades.</p>
+                    </div>
+                    <div class="servicos-card">
+                        <h3>Branding</h3>
+                        <p>Desenvolvimento de estratégias de marca para criar uma identidade forte e consistente no mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="depoimentos">
+            <div class="container">
+                <h2>Depoimentos</h2>
+                <div class="depoimentos-lista">
+                    <div class="depoimento-card">
+                        <p>"A Agência Criativa Web fez um trabalho incrível no design do nosso site. Estamos muito satisfeitos com o resultado!" - Cliente Satisfeito</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <div class="contato-conteudo">
+                    <div class="contato-info">
+                        <p>Endereço: Rua Exemplo, 123 - São Paulo/SP</p>
+                        <p>Telefone: (11) 9999-9999</p>
+                        <p>E-mail: contato@agenciacriativaweb.com.br</p>
+                    </div>
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div> 
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Agência Criativa Web. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
