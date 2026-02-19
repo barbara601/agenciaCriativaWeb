@@ -3,16 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*menu hamburguer*/
-.menu-toggle{
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    color: white;
-    cursor: pointer;
-}
 /*definindo cores dos modos light (root) e dark*/
+/*variáveis*/
 :root{
     /*light*/
     --bg: #faf6ed;
@@ -24,29 +16,34 @@
     --white: white;
     --card-bg: white;
     --border: #004aad;
+    --translucent: color-mix(in srgb, var(--primary) 85%, transparent);
 }
-body.dark-mode{
+.body--dark{
     --bg: #0f1424;
     --text: #e6e6e6;
     --primary: #1a3d8f;
     --secondary: #a4161a;
     --hover: #86050e;
     --accent: #d18800;
-    --white: #141a2a;       
+    --white: #141a2a;
     --card-bg: #141a2a;
     --border: #1f2a44;
+    --translucent: color-mix(in srgb, var(--primary) 85%, transparent);
 }
-body{
+/*base*/
+.body{
     background-color: var(--bg);
     line-height: 1.6;
     color: var(--text);
     font-family: 'Inter', sans-serif;
 }
-/*logo*/
-img {
-    width: 70px;
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
 }
-header{
+/*header, logo e toggle*/
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,89 +51,103 @@ header{
     background: var(--primary);
     color: white;
 }
+.header__logo{
+    width: 70px;
+}
+.header__menu-toggle{
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+}
 /*menu*/
-nav ul{
+.nav{
+    transition: 0.25s ease;
+}
+.nav__list{
     list-style: none;
     display: flex;
     gap: 1.5rem;
 }
-nav a{
+.nav__link{
     color: #f3ebde;
     text-decoration: none;
 }
-nav a:hover{
+.nav__link:hover{
     color: var(--accent);
 }
 /*botão tema*/
-.theme-toggle{
+.theme--toggle{
     background: none;
     border: none;
     color: white;
     font-size: 1.4rem;
     cursor: pointer;
 }
-.theme-toggle:hover{
+.theme--toggle:hover{
     background: none;
     color: var(--accent);
 }
 /*hero*/
-#home{
+.hero{
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 70%, var(--accent) 100%);
     color: white;
     padding: 6rem 2rem;
 }
-#home h2{
+.hero__title{
     font-family: 'Poppins', sans-serif;
     font-size: 3rem;
     max-width: 650px;
-    line-height: 1.1;
-    letter-spacing: 2px;
+    
 }
-#home p{
+.hero__text{
     margin-top: 1.5rem;
     max-width: 500px;
-    font-size: 1.1rem;
 }
-.container{
-    max-width: 1100px;
-    margin: auto;
-    padding: 4rem 1.5rem;
-}
-#sobre, #depoimentos, #contato{
+/*sections*/
+.section{
     background: var(--card-bg);
     padding: 3rem;
 }
-#sobre{
+.section--highlight{
     border-left: 6px solid var(--secondary);
 }
-.servicos-lista{
+.section__title{
+    margin-bottom: 1rem;
+}
+/*cards*/
+.card-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
 }
-.servicos-card{
-    flex: 1 1 300px;
+.card{
     background: var(--card-bg);
     padding: 2rem;
     transition: 0.2s;
 }
-.servicos-card:hover{
+.card:hover{
     transform: translateY(-6px);
     background: var(--accent);
+    color: var(--white)
 }
-.servicos-card h3{
+.card__title{
     font-family: 'Poppins', sans-serif;
     margin-bottom: 0.5rem;
     color: var(--primary);
 }
-.depoimento-card{
+/*depoimentos*/
+.depoimentos__card{
     margin-top: 1rem;
     padding: 1.5rem;
-    background: var(--bg);
+    background: var(--white);
     border-left: 5px solid var(--accent);
     font-style: italic;
 }
+/*formulário*/
 form{
     display: flex;
     flex-direction: column;
@@ -154,18 +165,20 @@ input:focus, textarea:focus{
     outline: none;
     border-color: var(--secondary);
 }
-button{
+/*botão*/
+.button{
     padding: 0.9rem;
     border: none;
     background: var(--secondary);
     color: white;
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+
     cursor: pointer;
 }
-button:hover{
+.button:hover{
     background: var(--hover);
 }
+/*rodapé*/
 footer{
     text-align: center;
     padding: 2rem;
@@ -173,32 +186,43 @@ footer{
     color: #f3ebde;
     margin-top: 3rem;
 }
+/*mobile*/
 @media (max-width: 768px){
-    .menu-toggle{
+    .header{
+        flex-wrap: wrap;
+        position: relative;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__menu-toggle{
         display: block;
     }
-    button:hover{
-        background: none;
+    .theme--toggle{
+        margin-left: 10px;
     }
-    nav{
+    /*menu escondido*/
+    .nav{
         display: none;
+        position: absolute;
         width: 100%;
+        top: 100%;
+        left: 0;
+        background: var(--translucent);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
     }
-    nav.active{
+    /*menu aberto*/
+    .nav--active{
         display: block;
     }
-    nav ul{
+    .nav__list{
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-        margin-top: 1rem;
+        padding: 1rem 0;
     }
-    header{
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    #home h2{
+    .hero__title{
         font-size: 1.8rem;
     }
 }
