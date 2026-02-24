@@ -1,0 +1,9 @@
+@use '../variaveis';
+/*depoimentos*/
+.depoimentos__card{
+    margin-top: variaveis.$spacing-sm;
+    padding: variaveis.$spacing-md;
+    background: var(--white);
+    border-left: 5px solid var(--accent);
+    font-style: italic;
+}

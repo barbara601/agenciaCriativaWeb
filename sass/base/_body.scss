@@ -1,0 +1,9 @@
+@use '../variaveis';
+@use '../mixins';
+/*base*/
+.body{
+    background-color: var(--bg);
+    line-height: 1.6;
+    color: var(--text);
+    @include mixins.fonte-padrao;
+}

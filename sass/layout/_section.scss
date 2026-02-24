@@ -1,0 +1,13 @@
+@use '../variaveis';
+/*sections*/
+.section{
+    background: var(--card-bg);
+    padding: 3rem;
+
+    &--highlight{
+        border-left: 6px solid var(--secondary);
+    }
+    &__title{
+        margin-bottom: calc(variaveis.$spacing-md / 2);
+    }
+}

@@ -1,0 +1,6 @@
+@use '../variaveis';
+.container{
+    max-width: variaveis.$container-width;
+    margin: 0 auto;
+    padding: variaveis.$spacing-md;
+}

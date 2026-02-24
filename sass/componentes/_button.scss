@@ -1,0 +1,16 @@
+@use '../variaveis';
+@use '../mixins';
+/*botão*/
+.button{
+    padding: 0.9rem;
+    border: none;
+    background: var(--secondary);
+    color: white;
+    /*font-family: 'Poppins', sans-serif;*/
+    @include mixins.fonte-button;
+    cursor: pointer;
+
+    &:hover{
+        background: var(--hover);
+    }
+}

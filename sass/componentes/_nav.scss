@@ -1,0 +1,18 @@
+@use '../variaveis';
+/*menu*/
+.nav{
+    transition: 0.25s ease;
+
+    &__list{
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+    }
+    &__link{
+        color: #f3ebde;
+        text-decoration: none;
+        &:hover{
+            color: var(--accent);
+        }
+    }
+}

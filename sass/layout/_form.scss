@@ -1,0 +1,20 @@
+@use '../variaveis';
+@use '../mixins';
+/*formulário*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: variaveis.$spacing-sm;
+    margin-top: variaveis.$spacing-md;
+}
+input, textarea{
+    padding: 0.8rem;
+    border: 2px solid var(--primary);
+    background: var(--card-bg);
+    color: var(--text);
+    @include mixins.fonte-padrao;
+}
+input:focus, textarea:focus{
+    outline: none;
+    border-color: var(--secondary);
+}

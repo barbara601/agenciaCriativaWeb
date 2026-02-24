@@ -1,0 +1,21 @@
+{
+  "name": "agenciacriativaweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barbara601/agenciaCriativaWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/barbara601/agenciaCriativaWeb/issues"
+  },
+  "homepage": "https://github.com/barbara601/agenciaCriativaWeb#readme"
+}

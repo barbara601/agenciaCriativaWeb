@@ -1,0 +1,27 @@
+@use '../variaveis';
+@use '../mixins';
+/*cards*/
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: variaveis.$spacing-md;
+    margin-top: variaveis.$spacing-lg;
+    transition: 0.2s;
+
+    .card{
+        background: var(--card-bg);
+        padding: variaveis.$spacing-lg;
+        transition: 0.2s;
+    
+        &:hover{
+            transform: translateY(-6px);
+            background: var(--accent);
+            color: var(--white);
+        }
+        &__title {
+            @include mixins.fonte-button;
+            margin-bottom: variaveis.$spacing-xs;
+            color: var(--primary);
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@use '../variaveis';
+@use '../mixins';
+/*hero*/
+.hero{
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 70%, var(--accent) 100%);
+    color: white;
+    padding: variaveis.$spacing-xl variaveis.$spacing-lg;
+
+    &__title{
+        @include mixins.fonte-button;
+        font-size: 3rem;
+        max-width: 650px;   
+    }
+    &__text{
+        margin-top: calc(variaveis.$spacing-md / 2);
+        max-width: 500px;
+    }
+}

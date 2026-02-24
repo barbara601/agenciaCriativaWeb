@@ -1,0 +1,41 @@
+@use '../variaveis';
+
+/*modo light*/
+:root {
+    --bg: #{variaveis.$bg};
+    --text: #{variaveis.$text};
+    --primary: #{variaveis.$primary};
+    --secondary: #{variaveis.$secondary};
+    --hover: #{variaveis.$hover};
+    --accent: #{variaveis.$accent};
+    --white: #{variaveis.$white};
+    --card-bg: #{variaveis.$card-bg};
+    --border: #{variaveis.$border};
+    --translucent: #{variaveis.$translucent};
+}
+/*modo dark*/
+.body--dark {
+    --bg: #0f1424;
+    --text: #e6e6e6;
+    --primary: #1a3d8f;
+    --secondary: #a4161a;
+    --hover: #86050e;
+    --accent: #d18800;
+    --white: #141a2a;
+    --card-bg: #141a2a;
+    --border: #1f2a44;
+    --translucent: color-mix(in srgb, var(--primary) 85%, transparent);
+}
+/*botão tema*/
+.theme--toggle{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+
+    &:hover{
+    background: none;
+    color: var(--accent);
+    }
+}

@@ -1,0 +1,7 @@
+@use 'variaveis';
+@mixin fonte-padrao{
+    font-family: variaveis.$font-primary;
+}
+@mixin fonte-button{
+    font-family: variaveis.$font-secondary;
+}

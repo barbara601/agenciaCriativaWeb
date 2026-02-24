@@ -1,0 +1,9 @@
+@use '../variaveis';
+/*rodapé*/
+footer{
+    text-align: center;
+    padding: variaveis.$spacing-lg;
+    background: var(--primary);
+    color: #f3ebde;
+    margin-top: 3rem;
+}
